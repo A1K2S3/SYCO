@@ -25,7 +25,7 @@ const displayInfo = () => {
 		if(Info.Task[i] != undefined){
 			$('.row').append(`
 				<div class=" col col-12 col-lg-3 col-md-4">
-					<div class="card border-secondary mb-3 m-auto  shadow-lg" style="max-width: 18em;">
+					<div class="card border-secondary mb-3 m-auto  shadow-sm" style="max-width: 18em;">
 						<div class="card-body text-secondary bg-light rounded-lg">
 							<p class="card-text">${Info.Task[i]}</p>
 							<button class="btn btn-danger float-right" onclick="deleteThis(this, this.id)" id="${id}"><i class="far fa-trash-alt"></i></button>
