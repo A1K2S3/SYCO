@@ -1,0 +1,37 @@
+:root {
+  --input-padding-x: 1.5rem;
+  --input-padding-y: .75rem;
+}
+
+/* body {
+  background: #007bff;
+  background: linear-gradient(to right, #0062E6, #33AEFF);
+} */
+.modal-content{
+	border: 1px solid #007bff;
+}
+.modal-header{
+	border-bottom: none;
+	background-color: #f8f9fa;
+}
+.modal-header, .modal-body, .modal-footer{
+	background-color: #f8f9fa;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+.btn-modal{
+	width: 4em;
+	height: 4em;
+	border-radius: 50%;
+	background-color: #ff0000b6;
+}
+.fas{
+	color: #fff;
+}
+.btn-danger{
+	width: 2em;
+	height: 2em;
+	padding: 0;
+}
