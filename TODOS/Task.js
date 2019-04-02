@@ -1,4 +1,8 @@
+
+// Declare Info as an Object
 var Info = {};
+
+// Fetch Data from LocalStorage
 function getInfo(){
 	if(localStorage.length == 0){
 		Info = {
@@ -11,12 +15,14 @@ function getInfo(){
 	}
 }
 
+// Update Data in Local Storage
 const putInfo = (Task) => {
 	Info.Task.push(Task);
 	localStorage.setItem('Info', JSON.stringify(Info));
 }
+
+// Display the Data in Card
 const displayInfo = () => {
-	
 	id = 1;
 	$('.row').empty();
 	$('.alertHurray').empty();
@@ -44,6 +50,8 @@ const displayInfo = () => {
 		`);
 	}
 }
+
+// Main Function
 const mainFunction = () => {
 	let Task = $('#Task').val();
 	getInfo();
@@ -51,7 +59,7 @@ const mainFunction = () => {
 	displayInfo();
 	$('#Task').val("")
 }
-
+// Delete the Task
 const deleteThis = (element, id) => {
 	delete Info.Task[id-1];
 	putInfo();
@@ -59,7 +67,6 @@ const deleteThis = (element, id) => {
 	element.closest(".col").remove();
 	alertify.error("Task Deleted");
 }
-
 $('document').ready(function(){
 	getInfo();
 	displayInfo();
